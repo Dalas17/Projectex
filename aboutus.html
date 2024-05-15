@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <div class="container">
+        <h2>Our Story</h2>
+        <p>At Frosty Fruits Creamery, we believe in the power of delicious ice cream to bring joy to people's lives. Our journey began with a simple passion for creating the most indulgent and flavorful frozen treats imaginable.</p>
+
+        <p>From creamy classics like vanilla and chocolate to exotic flavors bursting with fresh fruits and decadent toppings, each scoop is a delightful adventure for your taste buds. We source only the finest ingredients to ensure every bite is a moment of pure bliss.</p>
+
+        <p>But it's not just about the ice cream—it's about the memories we create with each cone, cup, or sundae shared with friends and family. Whether you're celebrating a special occasion or simply treating yourself to a sweet escape, Frosty Fruits Creamery is here to make every moment unforgettable.</p>
+
+        <p>Come join us on this delicious journey and experience the magic of ice cream like never before!</p>
+
+        <h2>Our Values</h2>
+        <p>We believe in using only the finest ingredients to create our ice cream. We are passionate about sustainability and strive to minimize our environmental impact. We value teamwork, integrity, and continuous improvement in everything we do.</p>
+
+    <h2>Our Team</h2>
+
+<ul id="team-list"></ul>
+
+
+<script>
+    var teamMembers = ["Danah Alasmri (Cofounder)", "Alhnouf Talal (Cofounder)", "Layan Alomrani (Cofounder)"];
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    var shuffledTeamMembers = shuffleArray(teamMembers);
+
+    var teamListElement = document.getElementById("team-list");
+
+    shuffledTeamMembers.forEach(function(member) {
+        var listItem = document.createElement("li");
+        listItem.textContent = member;
+        teamListElement.appendChild(listItem);
+    });
+</script>
+
+
+    <h2><center>Watch Our Delicious Ice Cream Video</center></h2>
+
+    <center>
+        <video width="640" height="360" controls>
+            <source src="C:\Users\dalas\OneDrive\Pictures\icecream_video.MP4" type="video/mp4">
+        </video>
+    </center>
+
+</body>
+</html>
